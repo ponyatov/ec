@@ -1,5 +1,11 @@
 (** VSCode integration *)
 
+let mkd name = 
+  if (not Sys.file_exists name) then Sys.mkdir name 0
+
+let vscode () =
+  Sys.file_exists 
+  Sys.mkdir ".vscode" 0
 
 let json name =
   let f = open_out (".vscode/" ^ name ^ ".json") in
