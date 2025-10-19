@@ -10,11 +10,11 @@ let license = "MIT"
 let github = "https://github.com/ponyatov/"
 
 let readme () =
-  let readme = open_out "README.md" in
-  output_string readme
+  let f = open_out "README.md" in
+  output_string f
     ("# `" ^ app ^ "` " ^ version ^ "\n## " ^ title ^ "\n\n" ^ "(c) " ^ author
    ^ " <<" ^ email ^ ">> " ^ string_of_int year ^ " " ^ license ^ "\n\ngithub: "
    ^ github ^ app ^ "\n");
-  close_out readme
+  close_out f
 
 (* readme () *)
