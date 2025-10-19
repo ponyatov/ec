@@ -1,5 +1,5 @@
 # `ec` 0.0.1
-## Elixir Compiler
+## E-lang Compiler
 
 (c) Dmitry Ponyatov <<dponyatov@gmail.com>> 2025 MIT
 
