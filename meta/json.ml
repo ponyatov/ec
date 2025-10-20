@@ -6,10 +6,10 @@
 
 type token =          (**)
   | NULL              (* null   *)
-  | TRUE | FALSE      (* bool:  true|fase *)
-  | STRING of string  (* str    *)
   | INT of int        (* int    *)
   | FLOAT of float    (* float  *)
+  | TRUE | FALSE      (* bool:  true|fase *)
+  | STRING of string  (* str    *)
   | LQ | RQ           (* []     *)
   | LC | RC           (* {}     *)
   | COMMA | COLON     (* , :    *)
