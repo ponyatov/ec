@@ -1,0 +1,2 @@
+.PHONY: gz
+gz: $(GZ)
