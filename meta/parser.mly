@@ -15,7 +15,7 @@
 %token PLUS MINUS STAR SLASH PERC
 %token EXCL AND BAR
 %token COMMA COLON
-%token EOF
+%token EOL EOF
 
 %start <AST.expr> syntax
 

@@ -9,5 +9,6 @@ let space = [' ' '\t' '\r']+
 let nl = '\n'
 
 rule lexer = parse
-    | space     { lexer lexbuf }
-    | nl        { lexer lexbuf }
+    | space                 { lexer lexbuf  }
+    | nl                    { EOL           }
+    | sign? dec+ as lexeme  { INT(int_of_string lexeme) }
