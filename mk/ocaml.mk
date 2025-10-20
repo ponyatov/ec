@@ -23,5 +23,5 @@ $(OPAM):
 	echo "version = `ocamlformat --version`" > $@
 
 .PHONY: parser
-parser: meta/e.mly
-	$(MENHIR) $<
+parser: meta/parser.mly
+	$(MENHIR) --explain --dump $<
