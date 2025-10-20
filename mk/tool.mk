@@ -8,6 +8,7 @@ UTOP   = $(ODIR)/utop
 DUNE   = $(ODIR)/dune
 OFMT   = $(ODIR)/ocamlformat
 OLSP   = $(ODIR)/ocamllsp
+OLEX   = $(ODIR)/ocamllex
 MENHIR = $(ODIR)/menhir
 #
 CC     = gcc

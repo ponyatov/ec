@@ -1,3 +1,5 @@
 *.automaton
 *.conflicts
+lexer.ml
+parser.ml
 !.gitignore
