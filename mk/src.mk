@@ -1,0 +1,1 @@
+M += $(wildcard meta/*.ml)

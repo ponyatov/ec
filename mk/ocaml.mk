@@ -1,0 +1,29 @@
+ocaml: $(UTOP) $(DUNE) $(OFMT) $(OLSP) .ocamlformat
+
+$(UTOP): $(OPAM) $(OCAMLC)
+	opam install -y utop && touch $@
+$(DUNE): $(OPAM) $(OCAMLC)
+	opam install -y dune && touch $@
+$(OFMT): $(OPAM) $(OCAMLC)
+	opam install -y ocamlformat && touch $@
+$(OLSP): $(OPAM) $(OCAMLC)
+	opam install -y ocaml-lsp-server && touch $@
+$(CAMLP5): $(OPAM) $(OCAMLC)
+	opam install -y camlp5 && touch $@
+$(MENHIR): $(OPAM) $(OCAMLC)
+	opam install -y menhir && touch $@
+
+$(OCAMLC): $(OPAM)
+	opam switch create $(OCAML_VER) && touch $@
+$(OPAM):
+	bash -c "sh <(curl -fsSL https://opam.ocaml.org/install.sh)"
+	opam init
+
+.ocamlformat:
+	echo "version = `ocamlformat --version`" > $@
+
+.PHONY: parser
+parser: meta/lexer.ml
+# 	$(MENHIR) --explain --dump meta/parser.mly
+meta/%.ml: meta/%.mll
+	$(OLEX) $<
