@@ -6,7 +6,7 @@
         "bin/**": true, "tmp/**": true, "ref/**": true,
     },
     "files.associations": {
-        "*.ini": "properties", "*.e": "properties"
+        "*.ini": "e", "*.e": "e"
     },
 
     // editor
@@ -27,10 +27,17 @@
     "files.autoSaveDelay": 2222,
     // "git.enabled": false,
 
+    // terminal
+    "SerialTerminal.serial port.configurations": ["115200n1"],
+
     // JavaScript
     "prettier.configPath"         : ".prettierrc",
     "prettier.requireConfig"      :  true,
     "json.format.enable"          :  true,
+    "[javascript]": {"editor.defaultFormatter" : "esbenp.prettier-vscode",},
+    "[json]"      : {"editor.defaultFormatter" : "esbenp.prettier-vscode",},
+    "[jsonc]"     : {"editor.defaultFormatter" : "esbenp.prettier-vscode",},
+    "[typescript]": {"editor.defaultFormatter" : "esbenp.prettier-vscode" },
 
     // clang-format
     "clang-format.executable"     : "clang-format",
