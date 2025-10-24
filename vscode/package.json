@@ -1,0 +1,46 @@
+{
+    "name"       : "e",
+    "displayName": "E",
+    "description": "[E]mbedded language",
+    "version"    : "0.0.1",
+    "icon"       : "logo.png",
+    "publisher"  : "dponyatov",
+    "license"    : "MIT",
+    "engines": {
+        "vscode": "^1.90.0"
+    },
+    "categories": [
+        "Programming Languages", "Debuggers"
+    ],
+    "keywords": [
+        "bytecode", "FORTH", "CLI", "REPL", "script", "interpreter"
+    ],
+    "bugs": {
+        "url": "https://github.com/ponyatov/ec/issue"
+    },
+    "homepage": "https://github.com/ponyatov/ec",
+    "repository": {
+        "type": "git",
+        "url" : "https://github.com/ponyatov/e/tree/dponyatov/vscode"
+    },
+    "activationEvents": [
+        "workspaceContains:lib/*.ini",
+        "workspaceContains:lib/*.f"
+    ],
+    "extensionDependencies": [
+        "ms-python.python"
+    ],
+    "main": "extension.js",
+    "contributes": {
+        "languages": [{
+            "id"           :  "e",
+            "extensions"   : [".ini", ".f"],
+            "configuration":  "languageConfiguration.json"
+        }],
+        "grammars": [{
+            "language" : "e",
+            "scopeName": "source.e",
+            "path"     : "tmLanguage.json"
+        }]
+    }
+}

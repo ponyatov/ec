@@ -1,5 +1,5 @@
 # `ec` 0.0.1
-## E-lang Compiler
+## [E]mbedded programming language
 
 (c) Dmitry Ponyatov <<dponyatov@gmail.com>> 2025 MIT
 
